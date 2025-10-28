@@ -1,0 +1,17 @@
+func singleNumber(nums []int) int {
+    	numMap := make(map[int]int);
+	for _,num:=range nums{
+		if _,exists:=numMap[num];!exists{
+			numMap[num]=1;			
+		}else{
+			delete(numMap,num);
+		}
+		
+	}
+	var sum int;
+	for value:=range numMap{
+		  sum=value;
+	}
+	return sum;
+    
+}
